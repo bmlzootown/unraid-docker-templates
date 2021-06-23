@@ -11,6 +11,7 @@
   <Project>https://github.com/itzg/docker-minecraft-server</Project>
   <Overview>Docker image that provides a Minecraft Server that will automatically download selected version at startup. For a complete list of all features/extra parameters go to: https://github.com/itzg/docker-minecraft-server/blob/master/README.md</Overview>
   <Category>GameServers:</Category>
+  <Icon>https://raw.githubusercontent.com/jahanson/unraid-docker-templates/master/Minecraft_itzg.png</Icon>
   <TemplateURL>https://raw.githubusercontent.com/jahanson/unraid-docker-templates/master/itzg-minecraft-server.xml</TemplateURL>
   <Networking>
     <Mode>bridge</Mode>
