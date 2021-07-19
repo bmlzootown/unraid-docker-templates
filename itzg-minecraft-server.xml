@@ -84,9 +84,9 @@
   <Config Name="Accept EULA" Target="EULA" Default="" Mode="" Description="Set to TRUE to accept EULA" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Server Type" Target="TYPE" Default="" Mode="" Description="Ex. Paper, Forge, Spigot, Bukkit, etc..." Type="Variable" Display="always" Required="false" Mask="false">MOHIST</Config>
   <Config Name="Server Version" Target="VERSION" Default="" Mode="" Description="Mohist Version" Type="Variable" Display="always" Required="false" Mask="false">1.16.5</Config>
-  <Config Name="ISO Timezone" Target="TZ" Default="" Mode="" Description="Ex. America/Chicago" Type="Variable" Display="advanced" Required="false" Mask="false">America/Chicago</Config>
   <Config Name="Memory limit" Target="MEMORY" Default="" Mode="" Description="Ex. 500M, 2G, 6G" Type="Variable" Display="advanced" Required="false" Mask="false">4G</Config>
+  <Config Name="ISO Timezone" Target="TZ" Default="" Mode="" Description="Ex. America/Chicago" Type="Variable" Display="advanced" Required="false" Mask="false">America/Chicago</Config>
   <Config Name="Use Aikar Flags" Target="USE_AIKAR_FLAGS" Default="" Mode="" Description="Ex. True/False" Type="Variable" Display="advanced" Required="false" Mask="false">TRUE</Config>
-  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="0" Type="Variable" Display="always" Required="true" Mask="false">0</Config>
-  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="0" Type="Variable" Display="always" Required="true" Mask="false">0</Config>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="0" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="0" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
 </Container>
