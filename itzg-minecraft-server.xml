@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Minecraft Server</Name>
-  <Repository>itzg/minecraft-server</Repository>
+  <Name>SwankyCraft</Name>
+  <Repository>itzg/minecraft-server:java11</Repository>
   <Registry>https://hub.docker.com/r/itzg/minecraft-server</Registry>
   <Network>bridge</Network>
   <MyIP/>
@@ -42,8 +42,23 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value>PAPER</Value>
+      <Value>MOHIST</Value>
       <Name>TYPE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1.16.5</Value>
+      <Name>VERSION</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>PGID</Name>
       <Mode/>
     </Variable>
     <Variable>
@@ -52,7 +67,7 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value>2G</Value>
+      <Value>4G</Value>
       <Name>MEMORY</Name>
       <Mode/>
     </Variable>
@@ -67,8 +82,11 @@
   <Config Name="minecraft" Target="25565" Default="" Mode="tcp" Description="Minecraft Port: " Type="Port" Display="always" Required="false" Mask="false">25565</Config>
   <Config Name="data" Target="/data" Default="" Mode="rw" Description="Container Path: /data -- Saves, mods, etc..." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Minecraft/minecraft1</Config>
   <Config Name="Accept EULA" Target="EULA" Default="" Mode="" Description="Set to TRUE to accept EULA" Type="Variable" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="Server Type" Target="TYPE" Default="" Mode="" Description="Ex. Paper, Forge, Spigot, Bukkit, etc..." Type="Variable" Display="always" Required="false" Mask="false">PAPER</Config>
+  <Config Name="Server Type" Target="TYPE" Default="" Mode="" Description="Ex. Paper, Forge, Spigot, Bukkit, etc..." Type="Variable" Display="always" Required="false" Mask="false">MOHIST</Config>
+  <Config Name="Server Version" Target="VERSION" Default="" Mode="" Description="Mohist Version" Type="Variable" Display="always" Required="false" Mask="false">1.16.5</Config>
   <Config Name="ISO Timezone" Target="TZ" Default="" Mode="" Description="Ex. America/Chicago" Type="Variable" Display="advanced" Required="false" Mask="false">America/Chicago</Config>
-  <Config Name="Memory limit" Target="MEMORY" Default="" Mode="" Description="Ex. 500M, 2G, 6G" Type="Variable" Display="advanced" Required="false" Mask="false">2G</Config>
+  <Config Name="Memory limit" Target="MEMORY" Default="" Mode="" Description="Ex. 500M, 2G, 6G" Type="Variable" Display="advanced" Required="false" Mask="false">4G</Config>
   <Config Name="Use Aikar Flags" Target="USE_AIKAR_FLAGS" Default="" Mode="" Description="Ex. True/False" Type="Variable" Display="advanced" Required="false" Mask="false">TRUE</Config>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="0" Type="Variable" Display="always" Required="true" Mask="false">0</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="0" Type="Variable" Display="always" Required="true" Mask="false">0</Config>
 </Container>
