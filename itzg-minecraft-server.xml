@@ -87,6 +87,6 @@
   <Config Name="Memory limit" Target="MEMORY" Default="" Mode="" Description="Ex. 500M, 2G, 6G" Type="Variable" Display="advanced" Required="false" Mask="false">4G</Config>
   <Config Name="ISO Timezone" Target="TZ" Default="" Mode="" Description="Ex. America/Chicago" Type="Variable" Display="advanced" Required="false" Mask="false">America/Chicago</Config>
   <Config Name="Use Aikar Flags" Target="USE_AIKAR_FLAGS" Default="" Mode="" Description="Ex. True/False" Type="Variable" Display="advanced" Required="false" Mask="false">TRUE</Config>
-  <Config Name="UID" Target="PUID" Default="99" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
-  <Config Name="GID" Target="PGID" Default="100" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="UID" Target="UID" Default="99" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="100" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
 </Container>
