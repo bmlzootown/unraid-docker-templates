@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>docker-cod4</Name>
+  <Repository>henkallsn/docker-cod4</Repository>
+  <Registry>https://hub.docker.com/r/henkallsn/docker-cod4/</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/henkallsn/docker-cod4/</Support>
+  <Project>https://github.com/henkall/cod4xServer-docker</Project>
+  <Overview>Docker to run Call of Duty 4 Dedicated Server (Using the COD4x server)</Overview>
+  <Category>GameServers:</Category>
+  <WebUI/>
+  <TemplateURL>https://raw.githubusercontent.com/jahanson/unraid-docker-templates/master/itzg-minecraft-server.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/henkall/docker-cod4/master/cod4.ico</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Docker to run Call of Duty 4 Dedicated Server (Using the COD4x server)</Description>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>28960</HostPort>
+        <ContainerPort>28960</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/cod4</HostDir>
+      <ContainerDir>/home/cod4/gamefiles</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>+map_rotate</Value>
+      <Name>MAP</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>YES</Value>
+      <Name>READY</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>server.cfg</Value>
+      <Name>EXECFILE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1</Value>
+      <Name>SERVERTYPE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>MODNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>+set sv_authorizemode -1</Value>
+      <Name>EXTRA</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1</Value>
+      <Name>GETGAMEFILES</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Game Files" Target="/home/cod4/gamefiles" Default="/mnt/user/appdata/cod4" Mode="rw" Description="Container Path: /home/cod4/gamefiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/cod4</Config>
+  <Config Name="Port" Target="28960" Default="28960" Mode="udp" Description="Set what port the server should run on. If left empty this defaults to 28960" Type="Port" Display="always" Required="true" Mask="false">28960</Config>
+  <Config Name="Map" Target="MAP" Default="+map_rotate" Mode="" Description="Starts the server with the defined rotate sequence in server.cfg file." Type="Variable" Display="always" Required="true" Mask="false">+map_rotate</Config>
+  <Config Name="Enabled" Target="READY" Default="YES" Mode="" Description="Server won't start if this is empty. Set to YES to enable server." Type="Variable" Display="advanced-hide" Required="true" Mask="false">YES</Config>
+  <Config Name="Server Config" Target="EXECFILE" Default="server.cfg" Mode="" Description="Server config filename" Type="Variable" Display="advanced-hide" Required="true" Mask="false">server.cfg</Config>
+  <Config Name="Server Type" Target="SERVERTYPE" Default="1" Mode="" Description="1 = LAN&#13;&#10;2 = Internet&#13;&#10;&#13;&#10;* If 2 is used you have to use: set sv_authtoken " Type="Variable" Display="always" Required="true" Mask="false">1</Config>
+  <Config Name="Mod Name" Target="MODNAME" Default="" Mode="" Description="Defines what mod you whant to use. Write the name of the folder that you mod is in. For example modernpaintball." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="Authorize Mode" Target="EXTRA" Default="+set sv_authorizemode -1" Mode="" Description="-1 = cracked &amp;amp; legit players, 0 = legit only, 1 = cracked only" Type="Variable" Display="always" Required="true" Mask="false">+set sv_authorizemode -1</Config>
+  <Config Name="Get Game Files" Target="GETGAMEFILES" Default="1" Mode="" Description="Tells the server to get gamefiles or not. 1 is to get files. 0 is not to get files." Type="Variable" Display="advanced-hide" Required="true" Mask="false">1</Config>
+</Container>
