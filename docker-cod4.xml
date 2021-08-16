@@ -12,7 +12,7 @@
   <Overview>Docker to run Call of Duty 4 Dedicated Server (Using the COD4x server)</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
-  <TemplateURL>https://raw.githubusercontent.com/jahanson/unraid-docker-templates/master/itzg-minecraft-server.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/bmlzootown/unraid-docker-templates/master/docker-cod4.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/henkall/docker-cod4/master/cod4.ico</Icon>
   <ExtraParams/>
   <PostArgs/>
